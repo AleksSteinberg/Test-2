@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <title>Test: Create Form</title>
+</head>
+
+<body>
+    <div class="card">
+        <div class="left">
+            <div class="left-top"><img class="logo" src="images/logo.svg" alt="">
+                <h2>Welcome friend!</h2>
+                <h4>Don't you have a profile? <a class="register" href="">Register</a></h4>
+                <div class="icons">
+                	<a class="social google" href=""><img src="images/google.svg" alt=""></a>
+                	<a class="social gitgub" href=""><img src="images/github.svg" alt=""></a>
+                	<a class="social fb" href=""><img src="images/fb.svg" alt=""></a>
+                	<a class="social vk" href=""><img src="images/vk.svg" alt=""></a>
+                </div>
+            </div>
+            <p class="or">Or</p>
+            <div class="left-bottom">
+                <form action="/login" method="post"><label for="username">Email</label><br><input id="username" name="username" placeholder="yourname@mail.com" required><br><br><label for="password">Password</label><br>
+                    <div class="password"><input type="password" id="password-input" placeholder="Enter your password" name="password"> <a href="#" class="password-control" onclick="return show_hide_password(this)"></a></div><button type="submit" value="Log In">Sign in</button><br></form>
+                <a
+                    class="forgot" href="">Forgot password</a>
+            </div>
+        </div>
+        <div class="right"><img src="images/main.svg" alt=""></div>
+    </div>
+    <script>
+        function show_hide_password(t) {
+            var e = document.getElementById("password-input");
+            return "password" == e.getAttribute("type") ? (t.classList.add("view"), e.setAttribute("type", "text")) : (t.classList.remove("view"), e.setAttribute("type", "password")), !1
+        }
+    </script>
+</body>
+
+</html>

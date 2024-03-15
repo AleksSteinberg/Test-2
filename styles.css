@@ -1,0 +1,406 @@
+@font-face {
+  font-family: "Lexend";
+  src: url(fonts/Lexend/Lexend.ttf);
+}
+body {
+  background-color: rgb(32, 32, 32);
+  margin: 0;
+  padding: 0;
+  font-family: "Lexend";
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 45px;
+  margin: 20px 0 0;
+  padding: 0;
+}
+
+h4 {
+  font-family: "Lexend";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+}
+
+.card {
+  background: rgb(255, 255, 255);
+  width: 920px;
+  height: 660px;
+  border-radius: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.left-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  width: 55px;
+  height: 55px;
+}
+
+.register {
+  color: black;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+}
+
+.icons {
+  width: 217px;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.icons .social {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  margin-right: 11px;
+}
+.icons .social img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+.icons .social:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+.icons .social.google:hover::before {
+  background-image: url("images/google-hover.svg");
+}
+.icons .social.github:hover::before {
+  background-image: url("images/github-hover.svg");
+}
+.icons .social.fb:hover::before {
+  background-image: url("images/fb-hover.svg");
+}
+.icons .social.vk:hover::before {
+  background-image: url("images/vk-hover.svg");
+}
+.icons .social:hover img {
+  opacity: 0;
+}
+
+.or {
+  position: relative;
+  text-align: center;
+  padding: 0 10px 0 10px;
+  font-size: 10px;
+  line-height: 12.5px;
+  color: rgb(123, 129, 142);
+}
+.or::before, .or::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 140px;
+  height: 1px;
+  background-color: rgb(123, 129, 142);
+}
+.or::before {
+  right: 100%;
+}
+.or::after {
+  left: 100%;
+}
+
+.left-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+label {
+  font-size: 12px;
+  line-height: 15px;
+  width: 312px;
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+}
+
+input {
+  width: 312px;
+  border-radius: 28px;
+  border: none;
+  background-color: rgb(241, 241, 241);
+  height: 35px;
+  margin-top: 5px;
+  padding-left: 15px;
+}
+input::-webkit-input-placeholder {
+  font-family: "Lexend";
+  font-size: 12px;
+  line-height: 15px;
+  color: rgb(158, 164, 176);
+}
+input::-moz-placeholder {
+  font-family: "Lexend";
+  font-size: 12px;
+  line-height: 15px;
+  color: rgb(158, 164, 176);
+}
+input:-ms-input-placeholder {
+  font-family: "Lexend";
+  font-size: 12px;
+  line-height: 15px;
+  color: rgb(158, 164, 176);
+}
+input::-ms-input-placeholder {
+  font-family: "Lexend";
+  font-size: 12px;
+  line-height: 15px;
+  color: rgb(158, 164, 176);
+}
+input::placeholder {
+  font-family: "Lexend";
+  font-size: 12px;
+  line-height: 15px;
+  color: rgb(158, 164, 176);
+}
+
+.password {
+  position: relative;
+}
+
+.password-control {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  display: inline-block;
+  width: 19px;
+  height: 16px;
+  background: url(images/view.svg) 0 0 no-repeat;
+}
+.password-control:hover {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  display: inline-block;
+  width: 19px;
+  height: 16px;
+  background: url(images/view-hover.svg) 0 0 no-repeat;
+}
+.password-control.view {
+  background: url(images/noview.svg) 0 0 no-repeat;
+  position: absolute;
+  top: 17px;
+  right: 18px;
+  display: inline-block;
+  width: 19px;
+  height: 16px;
+}
+.password-control.view:hover {
+  background: url(images/noview-hover.svg) 0 0 no-repeat;
+}
+
+button {
+  width: 312px;
+  height: 50px;
+  padding: 17px, 0px, 18px, 0px;
+  border-radius: 78px;
+  border: none;
+  background: rgb(0, 0, 0);
+  color: white;
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+}
+button:hover {
+  background: rgb(251, 196, 0);
+  color: black;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.forgot {
+  text-decoration: none;
+  color: black;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+}
+
+.right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .card {
+    background: rgb(255, 255, 255);
+    width: 95%;
+    height: 660px;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+  .right {
+    display: none;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .or::before, .or::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 120px;
+    height: 1px;
+    background-color: rgb(123, 129, 142);
+  }
+  .right {
+    display: none;
+  }
+  input {
+    width: 99%;
+  }
+  button {
+    width: 99%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  label {
+    font-size: 12px;
+    line-height: 15px;
+    width: 150px;
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+  }
+  input {
+    width: 150px;
+    border-radius: 28px;
+    border: none;
+    background-color: rgb(241, 241, 241);
+    height: 35px;
+    margin-top: 5px;
+  }
+  button {
+    width: 150px;
+    height: 50px;
+    padding: 17px, 0px, 18px, 0px;
+    border-radius: 78px;
+    border: none;
+    background: rgb(0, 0, 0);
+    color: white;
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+  }
+  .or::before, .or::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    height: 1px;
+    background-color: rgb(123, 129, 142);
+  }
+}
